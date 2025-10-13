@@ -1,2 +1,2 @@
-# -Proyecto-Inform-tico
+# -Proyecto-Informatico
 PROYECTO GRUPAL
