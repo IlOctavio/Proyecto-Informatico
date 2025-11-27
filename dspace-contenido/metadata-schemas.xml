@@ -1,9 +1,0 @@
-usage: RegistryLoader [-b <arg>] [-h] [-m <arg>]
-Load bitstream format or metadata registries into the database
- -b,--bitstream <arg>   load bitstream format registry from specified file
- -h,--help              print this help message
- -m,--metadata <arg>    load metadata registry from specified file
-
-Examples:
- RegistryLoader -b bitstream-formats.xml
- RegistryLoader -m dc-types.xml
