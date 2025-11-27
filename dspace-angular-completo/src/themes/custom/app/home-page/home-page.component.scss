@@ -1,0 +1,96 @@
+// Eliminar espacio superior del contenedor principal solo en Home
+:host ::ng-deep {
+  .inner-wrapper {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+  }
+
+  .outer-wrapper {
+    padding-top: 0 !important;
+  }
+}
+
+// Sidebar refinada con diseño más limpio
+.sidebar-section {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.sidebar-title {
+  color: #333;
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  text-transform: none;
+  letter-spacing: 0.5px;
+}
+
+// Tarjetas modernas con efectos elegantes
+.list-group-item {
+  background-color: #fff !important;
+  border: 1px solid #eaeaea !important;
+  border-radius: 8px !important;
+  margin-bottom: 10px;
+  padding: 0.75rem 1rem;
+  transition: all 0.3s ease;
+  border-left: 5px solid #781428 !important;
+  color: #333 !important;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+    background-color: #fafafa !important;
+    color: #781428 !important;
+    border-left-color: #8B1538 !important;
+    
+    i {
+      color: #8B1538;
+      transform: scale(1.1);
+    }
+  }
+
+  i {
+    color: #781428;
+    width: 20px;
+    transition: all 0.3s ease;
+  }
+}
+
+// Estilos para las comunidades en el contenido principal
+:host ::ng-deep {
+  .top-level-community-list {
+    .list-group-item {
+      background-color: #fff !important;
+      border: 1px solid #eaeaea !important;
+      border-radius: 8px !important;
+      margin-bottom: 12px;
+      padding: 1rem 1.25rem;
+      transition: all 0.3s ease;
+      border-left: 5px solid #781428 !important;
+      
+      &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+        background-color: #fafafa !important;
+      }
+      
+      a {
+        text-decoration: none;
+        color: #333;
+        font-weight: 600;
+        font-size: 1.1rem;
+        
+        &:hover {
+          color: #781428;
+        }
+      }
+    }
+  }
+}

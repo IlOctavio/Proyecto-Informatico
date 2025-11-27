@@ -1,0 +1,21 @@
+# Override configuration for UPSO
+services:
+  dspace-angular:
+    environment:
+      DSPACE_UI_SSL: 'false'
+      DSPACE_UI_HOST: 0.0.0.0
+      DSPACE_UI_PORT: '4000'
+      DSPACE_UI_NAMESPACE: /
+      DSPACE_REST_SSL: 'false'
+      DSPACE_REST_HOST: 172.30.14.103
+      DSPACE_REST_PORT: 8080
+      DSPACE_REST_NAMESPACE: /server
+    volumes:
+      - ../src:/app/src
+      - ../config/config.yml:/app/config/config.yml:ro
+  dspace:
+    environment:
+      dspace__P__name: 'Repositorio Digital de la Universidad Provincial del Sudoeste (RD-UPSO)'
+      dspace__P__server__P__url: http://172.30.14.103:8080/server
+      dspace__P__ui__P__url: http://172.30.14.103:4000
+      default__P__language: es

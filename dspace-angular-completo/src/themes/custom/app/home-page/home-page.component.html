@@ -1,0 +1,67 @@
+<ds-home-news></ds-home-news>
+
+<div class="container">
+  <div class="row">
+    <!-- Contenido principal a la izquierda -->
+    <div class="col-lg-9 col-md-8 col-12">
+      <ds-top-level-community-list></ds-top-level-community-list>
+      @if (recentSubmissionspageSize>0) {
+        <ds-recent-item-list></ds-recent-item-list>
+      }
+    </div>
+
+    <!-- Sidebar derecho con navegación -->
+    <div class="col-lg-3 col-md-4 col-12">
+      <div class="sidebar-section">
+        <h5 class="sidebar-title">Explorar</h5>
+        
+        <div class="list-group">
+          <a routerLink="/community-list" class="list-group-item list-group-item-action">
+            <i class="fas fa-sitemap me-2"></i>
+            {{ 'home.browse.communities' | translate }}
+          </a>
+          
+          <a routerLink="/browse/dateissued" class="list-group-item list-group-item-action">
+            <i class="fas fa-calendar me-2"></i>
+            {{ 'home.browse.date' | translate }}
+          </a>
+          
+          <a routerLink="/browse/author" class="list-group-item list-group-item-action">
+            <i class="fas fa-user me-2"></i>
+            {{ 'home.browse.author' | translate }}
+          </a>
+          
+          <a routerLink="/browse/title" class="list-group-item list-group-item-action">
+            <i class="fas fa-font me-2"></i>
+            {{ 'home.browse.titles' | translate }}
+          </a>
+          
+          <a routerLink="/browse/subject" class="list-group-item list-group-item-action">
+            <i class="fas fa-tag me-2"></i>
+            {{ 'home.browse.subject' | translate }}
+          </a>
+        </div>
+
+        <!-- Sección MI CUENTA -->
+        <h5 class="sidebar-title mt-4">Mi Cuenta</h5>
+        <div class="list-group">
+          <a routerLink="/login" class="list-group-item list-group-item-action">
+            <i class="fas fa-sign-in-alt me-2"></i>
+            {{ 'menu.section.login' | translate }}
+          </a>
+        </div>
+
+        <!-- Sección DESCUBRE -->
+        <h5 class="sidebar-title mt-4">Descubre</h5>
+        <div class="list-group">
+          <a routerLink="/browse/author" class="list-group-item list-group-item-action">
+            <i class="fas fa-user me-2"></i>
+            {{ 'browse.metadata.author' | translate }}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ds-suggestions-popup></ds-suggestions-popup>

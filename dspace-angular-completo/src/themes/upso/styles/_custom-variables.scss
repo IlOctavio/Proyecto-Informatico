@@ -1,0 +1,64 @@
+// Colores UPSO - Basados en el logo
+$primary: #8B1538;  // Rojo bordo UPSO
+$secondary: #6c757d;
+$info: #5c7d99;     // Azul grisáceo  
+$light: #f8f9fa;
+$dark: #343a40;
+
+// Header colors
+$header-bg: #8B1538;  // Rojo bordo UPSO
+$header-text: #ffffff;
+
+// Ocultar thumbnails en la lista de comunidades del home
+ds-top-level-community-list {
+  .thumbnail-container {
+    display: none !important;
+  }
+  
+  margin-top: 4rem;
+  
+  h2 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  
+  .lead {
+    margin-bottom: 1.5rem;
+  }
+}
+
+// Mejorar espaciado de secciones en el home
+ds-home-page {
+  .container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+
+// Espaciado para envíos recientes
+ds-recent-item-list {
+  margin-top: 3rem;
+  
+  h2 {
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+}
+
+// Mejorar diseño de listas
+.list-group-item {
+  border-left: none;
+  border-right: none;
+  padding: 1rem 0;
+  
+  &:first-child {
+    border-top: none;
+  }
+}
+
+// Aumentar el tamaño del logotipo del header
+#header-logo {
+  max-height: 80px;
+  width: auto;
+}

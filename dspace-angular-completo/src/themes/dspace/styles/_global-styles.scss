@@ -1,0 +1,163 @@
+// Add any global css for the theme here
+
+// imports the base global style
+@import '../../../styles/_global-styles.scss';
+
+.facet-filter, .setting-option, .advanced-search {
+  background-color: var(--bs-light);
+  border-radius: var(--bs-border-radius);
+
+  &.p-3 {
+    // Needs !important because the original bootstrap class uses it
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+  }
+
+  .bg-secondary {
+    background-color: var(--bs-primary);
+  }
+
+  h4, .h4 {
+    font-size: 1.1rem
+  }
+}
+
+// Estilos personalizados UPSO
+// Ocultar thumbnails en la lista de comunidades del home
+ds-top-level-community-list {
+  .thumbnail-container {
+    display: none !important;
+  }
+  
+  margin-top: 4rem !important;
+  
+  h2 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  
+  .lead {
+    margin-bottom: 1.5rem;
+  }
+}
+
+// Mejorar espaciado de secciones en el home
+ds-home-page {
+  .container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+
+// Espaciado para envíos recientes
+ds-recent-item-list {
+  margin-top: 3rem;
+  
+  h2 {
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+}
+
+// Mejorar diseño de listas
+.list-group-item {
+  border-left: none;
+  border-right: none;
+  padding: 1rem 0;
+  
+  &:first-child {
+    border-top: none;
+  }
+}
+
+// Espaciado para list-group horizontal (pestañas de examinar)
+.list-group-horizontal {
+  gap: 0;
+  
+  .list-group-item {
+    padding: 0.5rem 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-right: none;
+    
+    &:first-child {
+      border-top-left-radius: 0.25rem;
+      border-bottom-left-radius: 0.25rem;
+    }
+    
+    &:last-child {
+      border-right: 1px solid rgba(0, 0, 0, 0.125);
+      border-top-right-radius: 0.25rem;
+      border-bottom-right-radius: 0.25rem;
+    }
+    
+    &.active {
+      margin-right: -1px;
+    }
+  }
+}
+
+// Aumentar el tamaño del logotipo del header
+#header-logo {
+  max-height: 100px !important;
+  width: auto;
+}
+
+// Eliminar la barra bordo debajo del header
+#header-navbar-wrapper {
+  border-bottom: none !important;
+  
+  #mobile-navbar-wrapper nav#collapsible-mobile-navbar {
+    border-bottom: none !important;
+  }
+}
+
+// Mejorar espaciado de la barra de filtros/examinar
+.search-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+  
+  button, a {
+    margin-right: 0.5rem;
+  }
+}
+
+// Mejorar el espaciado de los botones de vista en búsqueda
+ds-view-mode-switch {
+  display: flex;
+  gap: 0.25rem;
+  
+  button {
+    margin: 0 !important;
+  }
+}
+
+// Espaciado para las pestañas de búsqueda
+.nav-tabs {
+  margin-bottom: 1rem;
+  
+  .nav-link {
+    padding: 0.5rem 1rem;
+    margin-right: 0.25rem;
+  }
+  
+  .nav-item {
+    margin-right: 0.25rem;
+  }
+}
+
+// Mejorar espaciado de elementos en línea como los tabs
+.nav.nav-tabs.d-flex {
+  gap: 0.5rem;
+  
+  .nav-item {
+    margin: 0;
+  }
+  
+  .nav-link {
+    white-space: nowrap;
+  }
+}

@@ -1,0 +1,57 @@
+// Override or add CSS variables for UPSO theme
+
+:root {
+
+  @include media-breakpoint-up(md) {
+    --ds-header-logo-height: 40px;
+    --ds-header-height: 80px;
+  }
+  @include media-breakpoint-down(sm) {
+    --ds-header-logo-height: 50px;
+    --ds-header-height: 90px;
+  }
+
+  // Colores UPSO - Paleta cálida
+  --ds-header-bg: #FAF8F0;        // Fondo crema suave
+  --ds-navbar-bg: #FAF8F0;        // Navbar crema
+  --ds-body-bg: #FAF8F0;          // Fondo general crema
+  
+  --ds-banner-text-background: transparent;
+  --ds-banner-background-gradient-width: 0px;
+  
+  --ds-header-navbar-border-bottom-height: 4px;
+  --ds-header-navbar-border-bottom-color: #8A152C;  // Borde borgoña
+
+  --ds-expandable-navbar-border-top-color: #FAF8F0;
+  --ds-expandable-navbar-border-top-height: 0;
+  --ds-expandable-navbar-padding-top: 0;
+
+  --ds-item-page-img-field-default-inline-height: 24px;
+  --ds-item-page-img-field-ror-inline-height: var(--ds-item-page-img-field-default-inline-height);
+}
+
+// Ocultar completamente el banner de DSpace Sandbox
+ds-themed-home-page {
+  .jumbotron,
+  .jumbotron-fluid {
+    display: none !important;
+  }
+  
+  // Banner alternativo oculto
+  .banner-wrapper,
+  .home-news {
+    background-image: none !important;
+    background-color: transparent !important;
+  }
+}
+
+// Sombra suave para el header
+.header {
+  box-shadow: 0 2px 4px rgba(74, 63, 53, 0.1) !important;
+}
+
+// Estilo para secciones con fondo alternativo amarillo pálido
+.card,
+.panel {
+  background-color: #FEFBEF !important;
+}
